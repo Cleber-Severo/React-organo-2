@@ -1,7 +1,9 @@
 import './colaborador.css'
 
-const Colaborador = ({ colaborador, corDeFundo }) => {
-    return (<div className="colaborador">
+const Colaborador = ({ colaborador, corDeFundo,aoDeletar }) => {
+    return (
+    <div className="colaborador">
+        <div className='deletar' onClick={aoDeletar} >Deletar</div>
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={colaborador.imagem} alt={colaborador.nome} />
         </div>
