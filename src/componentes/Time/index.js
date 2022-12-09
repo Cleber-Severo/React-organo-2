@@ -1,11 +1,11 @@
 import Colaborador from '../Colaborador'
 import './time.css'
 
-const Time = ({ time, colaboradores, aoDeletar }) => {
+const Time = ({ time, colaboradores, aoDeletar, mudaCor}) => {
     return (
 
         colaboradores.length > 0 && <section className='time' style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: time.corPrimaria }}>
-            <input type='color' value={time.corSecundaria} className='input-cor' />
+            <input onChange={evento => mudaCor(evento.target.value, time.nome)} type='color' value={time.corSecundaria} className='input-cor' />
             <h3 style={{ borderColor: time.corSecundaria }}>{time.nome}</h3>
             <div className='colaboradores'>
                 {colaboradores.map((colaborador, indice) => {
