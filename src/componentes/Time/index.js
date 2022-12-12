@@ -6,7 +6,7 @@ const Time = ({ time, colaboradores, aoDeletar, mudaCor}) => {
     return (
 
         colaboradores.length > 0 && <section className='time' style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: hexToRgba(time.cor, 0.6) }}>
-            <input onChange={evento => mudaCor(evento.target.value, time.nome)} type='color' value={time.cor} className='input-cor' />
+            <input onChange={evento => mudaCor(evento.target.value, time.id)} type='color' value={time.cor} className='input-cor' />
             <h3 style={{ borderColor: time.cor }}>{time.nome}</h3>
             <div className='colaboradores'>
                 {colaboradores.map((colaborador, indice) => {
